@@ -1,0 +1,61 @@
+name: Settlers
+main: com.gmail.wintersj7.settlers.Settlers
+version: 1.2
+author: Waffles87
+description: Settlers of Minecraft
+permissions:
+    settlers.*:
+        description: Gives access to all non-admin settlers permissions.
+        children:
+            settlers.givemap_self: true
+            settlers.queue_self: true
+            settlers.speed1: true
+    settlers.givemap_self:
+        description: Use of set.givemap command for self.
+        default: true
+    settlers.queue_self:
+        description: Use of queuing and dequeuing commands for self.
+        default: true
+    settlers.admin_commands:
+        description: Use of all admin settlers commands.
+        default: op
+    settlers.block_manipulation:
+        description: Allows block breaking and placing in the lobby and template maps.
+        default: op
+    settlers.speed1:
+        description: Allows player to sprint faster on their own roads based on configured speed.
+        default: true
+    settlers.speed2:
+        description: Allows player to sprint faster on all roads based on configuration.
+        default: false
+commands:
+   set.givemap:
+      description: Give yourself or another player an appropriately scaled map of the world they're in.
+      usage: /<command> [other_player] 
+   set.tolobby:
+      description: Ports yourself or the given player to the settlers_lobby world.
+      usage: /<command> [other_player]
+   set.toworld:
+      description: Ports the given player to the given world.
+      usage: /<command> player world 
+   set.start:
+      description: Forces a new game to start with the current queue, which is then cleared.
+      usage: /<command>
+   set.q:
+      description: Alias for set.enqueue.
+      usage: /<command> [player]
+   set.enqueue:
+      description: Queues the player for the next Settlers game; acts on self if no player specified.
+      usage: /<command> [player]
+   set.dq:
+      description: Alias for set.dequeue.
+      usage: /<command> [player]
+   set.dequeue:
+      description: Dequeues the player from the Settlers queue; acts on self if no player specified.
+      usage: /<command> [player]
+   all:
+      description: Broadcasts a message to everyone in your current world.
+      usage: /<command> message
+   team:
+      description: Broadcasts a message to everyone on your team.
+      usage: /<command> message

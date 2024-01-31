@@ -1,0 +1,90 @@
+### Settlers Configs
+# Notes: I recommend you try the defaults before you change anything; some things were tough to find good values for.
+
+# normally 10; with only settlements and cities to earn points it should be lower.
+points_to_win: 10
+
+# Players needed in queue to start a new game
+players_to_start: 8
+
+# Maximum worlds to run at once
+max_worlds: 3
+
+# Number of blocks from the center of a hexagon to the side points and the top/bottom edges.
+# If you change this, you may have to change the template world to match, depending on if you 
+# make it bigger or smaller and by how much.
+hex_radius: 50
+
+# as of v0.6 the numbers correctly indicate a tile's number.
+generate_tile_numbers: true
+
+# Lower number height greatly decreases potential for lag, especially on world generation.
+number_height: 60
+
+# The list of blocks anyone can break in-game.
+# Note- There are some blocks you really should NOT enable, like planks, carpet, and wool.
+# Note- this list excludes resources that can be mined: logs, clay, iron_ore, and wheat. Those CANNOT be disabled.
+blocks_breakable:
+ - COBBLESTONE
+ - MOSSY_COBBLESTONE
+ - DIRT
+ - GRASS
+ - SAND
+ - LEAVES
+ - TORCH
+ - LADDER
+ - GLASS
+
+# Failure chance (out of 100) for harvesting the given unrefined resources.
+# Note- tools boost your roll, so with the right tool it is possible (likely) to have a roll greater than 100.
+# Note- different resources mine at different speeds; faster ones should have higher failure chance.
+wheat_difficulty: 99
+clay_difficulty: 90
+tree_difficulty: 94
+ore_difficulty: 70
+fleece_difficulty: 98
+
+# Chance out of 100 that a random stone tool will drop when mining a resource.
+tool_drop_chance: 6
+
+# Maximum number of refined resources a player can carry without losing any if a 7 is rolled.
+max_resources_held: 7
+
+# The amount of raw resources required to craft a refined one.
+# Note- if it's 4 or less, resources can be refined without the workbench in settlements.
+refine_amount: 6
+
+# How often do the "dice" roll (seconds)
+resource_timer: 45
+
+# How much time from when all players are queued to when the game starts (seconds).
+# Note- If set too low, the world will not be finished generating when players are ported there.
+# This value is automatically set to 30 if set below 30.
+game_start_countdown: 60
+
+# How long a team must wait after playing a development card before they can play another one (seconds).
+# Note- does not apply to victory point cards.
+development_card_cooldown: 30
+
+# Perks
+# Walk speed on your own roads, applies to everyone (Note: default walk speed is 0.2).
+sprint_speed_1: 0.32
+
+# Same as above but applies only to those with speed2 perk.
+sprint_speed_2: 0.39
+
+
+# Spawn point locations
+# You will probably want to change these if you modify the template.
+blueX: -278
+blueY: 63
+blueZ: 46
+redX: -112
+redY: 63
+redZ: -239
+brownX: 271
+brownY: 63
+brownZ: -39
+whiteX: 115
+whiteY: 63
+whiteZ: 231
